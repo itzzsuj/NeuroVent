@@ -1,0 +1,407 @@
+/* Navbar Styling */
+.navmain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #0d3b66; /* Dark blue background */
+  color: #ffffff; /* White text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Arial", sans-serif; /* Clean font */
+}
+
+.navtitle h1 {
+  font-size: 28px; /* Slightly larger title for emphasis */
+  font-weight: bold;
+  color: #ffffff; /* White text for the title */
+  margin: 0; /* Remove default margin */
+}
+
+.navcontent {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Add more spacing between items */
+}
+
+.navcontent p {
+  font-size: 16px; /* Standard size for navigation links */
+  font-weight: 500; /* Slightly bold for readability */
+  color: #ffffff; /* White text */
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navcontent p:hover {
+  color: #a8dadc; /* Light blue on hover for contrast */
+}
+
+.navbutton button {
+  padding: 10px 20px; /* Add padding for a better button shape */
+  background-color: #ffffff; /* White background for button */
+  color: #0d3b66; /* Dark blue text for contrast */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.navbutton button:hover {
+  background-color: #a8dadc; /* Light blue background on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hero Section Styling */
+.hero {
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Vertically center items */
+  height: 90vh; /* Full viewport height */
+  padding: 0 50px; /* Horizontal padding */
+  background-color: #13293d; /* Darker blue background */
+  font-family: "Poppins", sans-serif; /* Modern and clean font */
+  position: relative; /* To position the circle */
+  overflow: hidden; /* Prevent overflow of elements */
+}
+
+.herocontent {
+  max-width: 50%; /* Allow text to take up half of the container */
+  padding-left: 20px; /* Add spacing */
+}
+
+.herocontent h2 {
+  font-size: 64px; /* Larger than h1 for emphasis */
+  font-weight: 700; /* Bold for impact */
+  color: #a8dadc; /* Light blue text for contrast */
+  line-height: 1.2; /* Line height for better readability */
+  margin: 0; /* Remove default margin */
+}
+
+.heroimg {
+  position: relative; /* Make the image position adjustable relative to the circle */
+  max-width: 50%; /* Take up half of the container */
+  display: flex;
+  justify-content: flex-end; /* Push the image to the right */
+  align-items: center;
+  height: 100%; /* Full height of the hero section */
+}
+
+.heroimg::before {
+  content: "";
+  position: absolute; /* Position the circle independently */
+  width: 120%; /* Adjust size of the circle */
+  height: 100%; /* Adjust size of the circle */
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #0d3b66; /* Dark blue color */
+  top: 30%; /* Adjust the circle's vertical position */
+  right: -25%; /* Position the circle off-screen to the right */
+  z-index: 1; /* Place the circle below the image */
+}
+
+.heroimg img {
+  position: relative; /* Position image relative to the hero section */
+  z-index: 2; /* Ensure the image appears above the circle */
+  width: 50vw; /* Adjust the size of the image */
+  max-width: 700px; /* Prevent the image from being too large */
+  height: 70vh; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image fills its container properly */
+  transform: translate(
+    0,
+    -5%
+  ); /* Move the image up so the head appears outside the circle */
+}
+
+/*ABOUT STYLING*/
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  padding: 50px 20px; /* Add padding for spacing */
+  background-color: #f4faff; /* Light bluish-white background */
+  font-family: "Poppins", sans-serif; /* Modern and clean font */
+  color: #0d3b66; /* Dark blue text for contrast */
+}
+
+.abouttitle {
+  width: 100%; /* Make the title span the full width */
+  margin-bottom: 20px; /* Add space below the title */
+  margin-left: 20px; /* Ensure left alignment with the content */
+}
+
+.abouttitle h2 {
+  font-size: 36px; /* Size for the title */
+  font-weight: 700; /* Bold for emphasis */
+  color: #0d3b66; /* Dark blue text */
+  margin: 0; /* Remove default margin */
+  text-transform: uppercase; /* Uppercase for the title */
+}
+
+.aboucontent {
+  display: flex; /* Arrange the paragraph and image in a row */
+  justify-content: space-between; /* Add space between the items */
+  align-items: flex-start; /* Align the items to the top */
+  gap: 20px; /* Space between the paragraph and the GIF */
+  max-width: 1200px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the content horizontally */
+  padding-left: 20px; /* Align content with the title */
+}
+
+.aboucontent p {
+  flex: 1; /* Allow the paragraph to take up available space */
+  font-size: 20px; /* Bigger font size for better readability */
+  line-height: 1.8; /* Add spacing between lines */
+  margin: 0; /* Remove default margin */
+  color: #0d3b66; /* Dark blue text */
+}
+
+.aboutimg {
+  flex: 1; /* Allow the image to take up available space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.aboutimg img {
+  max-width: 120%; /* Ensure the image is responsive */
+  height: 400px; /* Set fixed height */
+  border-radius: 10px; /* Add rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/*SUPPORT STYLING*/
+.support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px; /* Add padding for spacing */
+  background-color: #13293d; /* Dark blue background for the entire section */
+  font-family: "Poppins", sans-serif; /* Modern and clean font */
+  color: #ffffff; /* White text for contrast against dark blue */
+}
+
+.supporttitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.supporttitle h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff; /* White text for the title */
+  text-transform: uppercase;
+}
+
+.supporttitle p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #a8dadc; /* Light blue for the paragraph text */
+}
+
+.supportform {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f4faff; /* Light bluish background for the form */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for form depth */
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formgroup label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #0d3b66; /* Dark blue text for labels */
+}
+
+.formgroup input,
+.formgroup textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formgroup input:focus,
+.formgroup textarea:focus {
+  outline: none;
+  border-color: #1e90ff; /* Blue border on focus */
+}
+
+button {
+  background-color: #1e90ff; /* Bright blue background */
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0d3b66; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/*FOOTER STYLING*/
+.footer {
+  color: #13293d; /* Dark blue text for contrast */
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footercontent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactdetails,
+.socialmedia {
+  flex: 1; /* Divide the space equally */
+  min-width: 250px; /* Ensure proper spacing on smaller screens */
+}
+
+.contactdetails h3,
+.socialmedia h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #13293d; /* Dark blue text for headings */
+}
+
+.contactdetails p,
+.socialmedia a {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #13293d; /* Dark blue text */
+  margin: 0 0 10px;
+}
+
+.socialmedia a {
+  display: block; /* Each link as a separate block */
+  text-decoration: none;
+  color: #13293d; /* Dark blue text */
+  transition: color 0.3s ease;
+}
+
+.socialmedia a:hover {
+  color: #1e90ff; /* Bright blue on hover */
+}
+
+.footerbottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #13293d; /* Dark blue text for footer bottom */
+  border-top: 1px solid #13293d; /* Separator line */
+  padding-top: 10px;
+}
+
+.icons i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 18px;
+}
+
+/*LOGIN STYLING*/
+/* Login Page Styling */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4faff; /* Light bluish-white background */
+  font-family: "Poppins", sans-serif; /* Modern font */
+}
+
+.logincontainer {
+  width: 100%;
+  max-width: 400px; /* Restrict form width */
+  background-color: #ffffff; /* White form background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center; /* Center the content */
+}
+
+.logincontainer h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d3b66; /* Dark blue text for the title */
+  margin-bottom: 20px;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+.formgroup label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #0d3b66; /* Dark blue text for labels */
+}
+
+.formgroup input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formgroup input:focus {
+  outline: none;
+  border-color: #1e90ff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Subtle glow */
+}
+
+button {
+  width: 100%;
+  background-color: #0d3b66; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1e90ff; /* Brighter blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.registerlink {
+  font-size: 14px;
+  color: #0d3b66; /* Dark blue text */
+  margin-top: 15px;
+}
+
+.registerlink a {
+  color: #1e90ff; /* Bright blue link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.registerlink a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
