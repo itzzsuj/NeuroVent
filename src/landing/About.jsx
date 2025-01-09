@@ -2,7 +2,7 @@ import doctorgif from '../assets/doctor-gif.gif';
 
 function About(){
     return(
-        <div className="about">
+        <div id="about" className="about">
             <div className="abouttitle">
                 <h2>WHO ARE WE?</h2>
             </div>

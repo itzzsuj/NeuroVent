@@ -1,6 +1,6 @@
 function Support() {
   return (
-    <div className="support">
+    <div id='support' className="support">
       <div className="supporttitle">
         <h2>Need Help?</h2>
         <p>
