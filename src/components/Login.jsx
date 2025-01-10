@@ -1,8 +1,16 @@
+import React, { useState } from "react";
+
 function Login() {
+  const [isRegistering, setIsRegistering] = useState(false);
+
+  const toggleForm = () => {
+    setIsRegistering(!isRegistering);
+  };
+
   return (
     <div className="login">
       <div className="logincontainer">
-        <h2>Login</h2>
+        <h2>{isRegistering ? "Register" : "Login"}</h2>
         <form>
           <div className="formgroup">
             <label htmlFor="email">Email</label>
@@ -16,10 +24,25 @@ function Login() {
               placeholder="Enter your password"
             />
           </div>
-          <button type="submit">Login</button>
+          {isRegistering && (
+            <div className="formgroup">
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+              />
+            </div>
+          )}
+          <button type="submit">{isRegistering ? "Register" : "Login"}</button>
         </form>
-        <p className="registerlink">
-          Don't have an account? <a href="/register">Register here</a>
+        <p className="togglelink">
+          {isRegistering
+            ? "Already have an account?"
+            : "Don't have an account?"}{" "}
+          <a onClick={toggleForm} style={{ cursor: "pointer", color: "blue" }}>
+            {isRegistering ? "Login here" : "Register here"}
+          </a>
         </p>
       </div>
     </div>
