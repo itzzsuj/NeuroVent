@@ -205,6 +205,21 @@
     -5%
   ); /* Move the image up so the head appears outside the circle */
 }
+.hero-title {
+  font-size: 64px; /* Larger than h1 for emphasis */
+  font-weight: 700; /* Bold for impact */
+  color: #a8dadc; /* Light blue text for contrast */
+  line-height: 1.2; /* Line height for better readability */
+  margin: 0; /* Remove default margin */
+}
+
+.hero-subtext {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 20px;
+}
 
 /*ABOUT STYLING*/
 .about {
@@ -243,7 +258,7 @@
 
 .aboucontent p {
   flex: 1; /* Allow the paragraph to take up available space */
-  font-size: 16px; /* Bigger font size for better readability */
+  font-size: 20px; /* Bigger font size for better readability */
   line-height: 1.8; /* Add spacing between lines */
   margin: 0; /* Remove default margin */
   color: #0d3b66; /* Dark blue text */
@@ -553,6 +568,14 @@ button:hover {
   .heroimg img {
     width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
+  }
+
+  .hero-title {
+    font-size: 30px; /* Larger than h1 for emphasis */
+    font-weight: 700; /* Bold for impact */
+    color: #a8dadc; /* Light blue text for contrast */
+    line-height: 1.2; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
   }
 
   /* About Section */
