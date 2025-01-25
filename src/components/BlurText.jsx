@@ -3,7 +3,7 @@ import { useSprings, animated } from '@react-spring/web';
 
 const BlurText = ({
   text = '',
-  delay = 200,
+  delay = 400,
   className = '',
   animateBy = 'words', // 'words' or 'letters'
   direction = 'top', // 'top' or 'bottom'
@@ -12,12 +12,10 @@ const BlurText = ({
   animationFrom,
   animationTo,
   easing = 'easeOutCubic',
-  onAnimationComplete,
 }) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
   const ref = useRef();
-  const animatedCount = useRef(0);
 
   // Default animations based on direction
   const defaultFrom =
@@ -54,19 +52,17 @@ const BlurText = ({
     elements.length,
     elements.map((_, i) => ({
       from: animationFrom || defaultFrom,
-      to: inView
-        ? async (next) => {
-            for (const step of animationTo || defaultTo) {
-              await next(step);
-            }
-            animatedCount.current += 1;
-            if (animatedCount.current === elements.length && onAnimationComplete) {
-              onAnimationComplete();
-            }
+      to: async (next) => {
+        while (true) {
+          for (const step of animationTo || defaultTo) {
+            await next(step);
           }
-        : animationFrom || defaultFrom,
+          await next(defaultFrom); // Reset animation to start again
+        }
+      },
       delay: i * delay,
       config: { easing },
+      loop: true,
     }))
   );
 
