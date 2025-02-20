@@ -56,4 +56,4 @@ Visualization: Matplotlib, Seaborn, Plotly (for cognitive decline trends)
 
 Deployment: Flask, FastAPI (for API integration), ONNX (for model interoperability)
 
-Security: Zero-Trust Architecture, Blockchain for secure patient data 
+Security: Zero-Trust Architecture, Blockchain for secure patient data storage.
